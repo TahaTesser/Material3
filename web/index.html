@@ -1,7 +1,11 @@
 <!DOCTYPE html>
+
 <head>
   <script type="module" src="./index.js"></script>
   <script src="./bundle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
   <style>
     :root {
@@ -12,15 +16,34 @@
       display: flex;
       align-items: center;
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h5 {
+      display: flex;
+      justify-content: center;
+    }
   </style>
 </head>
-<body>
-  <label>
-    Material 3
-    <md-checkbox checked></md-checkbox>
-  </label>
 
-  <md-outlined-button label="Back"></md-outlined-button>
-  <md-filled-button label="Next"></md-filled-button>
-  <md-slider></md-slider>
+<body>
+  <div class="container">
+    <h5>Slider</h5>
+    <md-slider value="50" min="0" max="100"></md-slider>
+    <br />
+    <md-slider value="50" min="0" max="100" withLabel="true"></md-slider>
+    <br />
+    <md-slider value="40" min="0" max="100" step="20" withTickMarks="true" withLabel="true"></md-slider>
+    <h5>RangeSlider</h5>
+    <md-slider value="20, 80" min="0" max="100"></md-slider>
+    <br />
+    <md-slider value="20, 80" min="0" max="100" withLabel="true"></md-slider>
+    <br />
+    <md-slider value="20, 80" min="0" max="100" step="20" withTickMarks="true" withLabel="true"></md-slider>
+  </div>
 </body>
